@@ -1,0 +1,106 @@
+.rv-overflow-hidden {
+  overflow: hidden !important;
+}
+.rv-popup {
+  position: fixed;
+  background-color: aqua;
+  max-height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.rv-popup--bottom {
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.rv-popup--center {
+  left: 50%;
+  bottom: 0;
+}
+
+.rv-popup--top {
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.rv-popup--right {
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.rv-popup--left {
+  left: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.rv-popup--bottom-enter,
+.rv-popup--bottom-enter-active
+{
+  transform: translate3d(0, 100%, 0);
+}
+
+.rv-popup--center-enter,
+.rv-popup--center-enter-active {
+  transform: translate3d(-50%, 100%, 0);
+}
+
+.rv-popup--top-enter,
+.rv-popup--top-enter-active {
+  transform: translate3d(0, -100%, 0);
+}
+
+.rv-popup--left-enter,
+.rv-popup--left-enter-active {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.rv-popup--right-enter,
+.rv-popup--right-enter-active {
+  transform: translate3d(100%, 0, 0);
+}
+
+.rv-popup--top-enter-done,
+.rv-popup--left-enter-done,
+.rv-popup--right-enter-done,
+.rv-popup--bottom-enter-done {
+  transform: translate3d(0, 0, 0);
+  transition: transform 200ms;
+}
+
+.rv-popup--center-enter-done {
+  transform: translate3d(-50%, 0, 0);
+  bottom: 50%;
+  transition: transform 300ms, bottom 300ms;
+}
+
+.rv-popup--bottom-exit,
+.rv-popup--bottom-exit-active {
+  transform: translate3d(0, 100%, 0);
+  transition: transform 200ms ease-in;
+}
+
+.rv-popup--center-exit,
+.rv-popup--center-exit-active {
+  transform: translate3d(-50%, 100%, 0);
+  bottom: 0;
+  transition: transform 300ms ease-in, bottom 300ms ease-in;
+}
+
+.rv-popup--top-exit,
+.rv-popup--top-exit-active {
+  transform: translate3d(0, -100%, 0);
+  transition: transform 200ms ease-in;
+}
+
+.rv-popup--left-exit,
+.rv-popup--left-exit-active {
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 200ms ease-in;
+}
+
+.rv-popup--right-exit,
+.rv-popup--right-exit-active {
+  transform: translate3d(100%, 0, 0);
+  transition: transform 200ms ease-in;
+}
